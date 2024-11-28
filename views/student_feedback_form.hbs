@@ -1,0 +1,35 @@
+    <!--HTMl for the form that accepts input, uses POST to accept feedback, send to /submit_feedback-->
+    <div class="p-3 mb-2 bg-info-subtle text-info-emphasis mb-3 p-4 rounded-2">
+    <h1>Please provide feedback.<br> Only comments are required.</h1>
+    </div>
+    <form action="/submit_feedback" method="POST">
+        <label class = "form-label" for ="name">Name</label>
+        <input class = "form-control" id = "name" name = "name">
+
+        <br>
+
+        <label class = "form-label" for ="email">Email</label>
+        <input class = "form-control" id = "email" type = "email" name = "email">
+
+        <br>
+
+        <label class = "form-label" for ="comments">Comments</label>
+        <textarea class = "form-control" id ="comments" name = "comments" required></textarea>
+
+        <br>
+        <p class = "mx-2">Are you a current student?</p>
+        <div class="form-check">
+            <input class = "form-check-input" id = "yes" type ="radio" value= "yes" name = "current-student">
+            <label class ="form-check-label" for = "yes">Yes</label>
+        </div>
+
+        <div class="form-check">
+            <input class = "form-check-input" id = "no" type = "radio" value= "no" name = "current-student">
+            <label class ="form-check-label" for = "no">No</label>
+        </div>
+        <br>
+    <!--Button that sends data on to /submit_feedback-->
+        <input class = "btn btn-info" type="submit">
+
+        
+    </form>
